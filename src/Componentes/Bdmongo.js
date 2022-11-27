@@ -7,7 +7,7 @@ const Bdmongo=()=>{
     const [todo,settodo]=useState([])
 
     const var_datos=()=>{
-        fetch('https://backend-one-dun.vercel.app/servicios/todo')
+        fetch('http://localhost:5000/servicios/todo')
             .then(res=>res.json())
             .then(datos2=>settodo(datos2))
     }

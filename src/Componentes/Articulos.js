@@ -31,7 +31,7 @@ class Articulos extends Component {
             id: e.target.name
         })
 
-        axios.post("https://backend-one-dun.vercel.app/servicios/actualizar2", this.state)
+        axios.post("http://localhost:5000/servicios/actualizar2", this.state)
     }
 
     intercambiar(e) {
@@ -39,11 +39,11 @@ class Articulos extends Component {
             id: e.target.name
         })
         console.log(this.state);
-        axios.post("https://backend-one-dun.vercel.app/intercambiar", this.state)
+        axios.post("http://localhost:5000/intercambiar", this.state)
     }
 
     eliminar(e) {
-        let direccion = "https://backend-one-dun.vercel.app/servicios/borrar/" + e.target.name
+        let direccion = "http://localhost:5000/servicios/borrar/" + e.target.name
         axios.get(direccion)
             .then(dato => alert("El artículo " + e.target.name + "ha sido borrado con éxito"))
 

@@ -28,7 +28,7 @@ class Crear_usuario extends Component {
 
     }
     guardar(){
-        axios.post('https://backend-one-dun.vercel.app/usuarios/nuevo',this.state)
+        axios.post('http://localhost:5000/usuarios/nuevo',this.state)
         .then(console.log("Creado"))
     alert('Usuario creado')
     this.setState({nombre:""})
